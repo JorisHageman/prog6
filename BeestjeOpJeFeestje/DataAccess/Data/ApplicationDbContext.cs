@@ -19,7 +19,7 @@ namespace Models {
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) {
             if (!optionsBuilder.IsConfigured) {
-                optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=BeestjeOpJeFeestjeDb;Trusted_Connection=True;");
+                optionsBuilder.UseSqlServer(@"Server=tcp:beestjeopjefeestjedb.database.windows.net,1433;Initial Catalog=BeestjeOpJeFeestjeDB;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;Authentication='Active Directory Default';");
             }
         }
 
